@@ -1,0 +1,50 @@
+.Forecast {
+  padding: 30px 30px 7px 30px;
+  background-color: #c4e6f7;
+  border: 1px solid #7ab9e4;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mainIcon {
+  width: 100px;
+  padding-bottom: 25px;
+  padding-right: 5px;
+}
+.searchArea {
+  border-color: #7ab9e4;
+}
+
+.Forecast h1 {
+  font-size: 34px;
+  line-height: 28px;
+  margin-top: 15px;
+  color: #1f5172;
+  font-weight: bold;
+}
+
+.actualTime {
+    padding-left: 0;
+}
+
+.Forecast li {
+  list-style: none;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+footer {
+    font-size: 10px;
+    padding-top: 20px;
+}
+
+.currentTemp {
+    font-size: 38px;
+}
+
+.Forecast .units {
+    font-size: 15px;
+    position: relative;
+    top: -16px
+}
