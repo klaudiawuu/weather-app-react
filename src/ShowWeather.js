@@ -35,7 +35,6 @@ export default function ShowWeather(props) {
         App created by Klaudia Wawrzynczyk. Please find the code source{" "}
         <a
           href="https://github.com/klaudiawuu/weather-app-react"
-          target="_blank"
           rel="noopener"
           class="source"
         >
