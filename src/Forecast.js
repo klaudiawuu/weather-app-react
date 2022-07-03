@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Forecast.css";
+import CorrectDateFormat from "./CorrectDateFormat.js"
 
 export default function Forecast() {
   const [weatherDetails, setWeatherDetails] = useState({ ready: false });
@@ -9,7 +10,7 @@ export default function Forecast() {
     setWeatherDetails({
       ready: true,
       city: response.data.name,
-      day: "Friday 10:00",
+      day: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: "https://i.ibb.co/mCRPjrR/sunbehindcloud.png",
       temperature: response.data.main.temp,
@@ -42,7 +43,7 @@ export default function Forecast() {
         </form>
         <h1>{weatherDetails.city}</h1>
         <ul className="actualTime">
-          <li>{weatherDetails.day}</li>
+          <li><CorrectDateFormat day={weatherDetails.day} /></li>
           <li className="text-capitalize">{weatherDetails.description}</li>
         </ul>
         <div className="row">
