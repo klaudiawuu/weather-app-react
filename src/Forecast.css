@@ -46,15 +46,31 @@
 
 footer {
   font-size: 10px;
-  padding-top: 20px;
+}
+
+.source {
+  text-decoration: none
 }
 
 .currentTemp {
   font-size: 38px;
 }
 
-.Forecast .units {
+.units {
   font-size: 15px;
   position: relative;
   top: -16px;
+  
+}
+
+.fahrenheit {
+text-decoration: none
+}
+
+.celc {
+text-decoration: none
+}
+
+.additionalInfo {
+  padding-top: 25px;
 }
