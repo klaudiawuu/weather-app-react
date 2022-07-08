@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Forecast.css";
 import ShowWeather from "./ShowWeather";
+import NextDaysForecast from "./NextDaysForecast";
 
 export default function Forecast(props) {
   const [weatherDetails, setWeatherDetails] = useState({ ready: false });
@@ -18,6 +19,7 @@ export default function Forecast(props) {
       realFeel: response.data.main.feels_like,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      coordinates: response.data.coord,
     });
   }
 
@@ -60,6 +62,17 @@ export default function Forecast(props) {
           </div>
         </form>
         <ShowWeather info={weatherDetails} />
+        <NextDaysForecast coordinates={weatherDetails.coordinates} />
+        <footer>
+          App created by Klaudia Wawrzynczyk. Please find the code source{" "}
+          <a
+            href="https://github.com/klaudiawuu/weather-app-react"
+            rel="noopener"
+            className="source"
+          >
+            here
+          </a>
+        </footer>
       </div>
     );
   } else {

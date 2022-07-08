@@ -2,7 +2,6 @@ import React from "react";
 import CorrectDateFormat from "./CorrectDateFormat";
 import "./Forecast.css";
 import Units from "./Units";
-import NextDaysForecast from "./NextDaysForecast";
 
 export default function ShowWeather(props) {
   return (
@@ -32,17 +31,8 @@ export default function ShowWeather(props) {
           </ul>
         </div>
       </div>
-      <NextDaysForecast />
-      <footer>
-        App created by Klaudia Wawrzynczyk. Please find the code source{" "}
-        <a
-          href="https://github.com/klaudiawuu/weather-app-react"
-          rel="noopener"
-          class="source"
-        >
-          here
-        </a>
-      </footer>
+
+      
     </div>
   );
 }
